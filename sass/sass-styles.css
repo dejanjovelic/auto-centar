@@ -1,0 +1,131 @@
+header {
+  padding: 10px;
+  height: 3%;
+  background-color: #dde0e9;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+header nav ul .nav-more {
+  display: none;
+}
+header nav ul li {
+  width: 100%;
+  list-style: none;
+}
+header nav ul li a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #003153;
+  font-weight: bolder;
+}
+header nav ul li a:hover {
+  color: #b96d34;
+}
+header nav ul li a img {
+  width: 50%;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+main .sellers {
+  height: 60%;
+  background-color: #dde0e9;
+  background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .sellers h1 {
+  margin-left: 50px;
+}
+main .sellers .locations {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .sellers .locations div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  align-items: center;
+}
+main .sellers .locations div:hover {
+  border: 0.5px solid #003153;
+}
+main .sellers .locations div h2 {
+  margin: 10px;
+}
+main .sellers .locations div P {
+  margin: 10px;
+}
+main .sellers .locations div P span {
+  color: #b96d34;
+}
+main .cars {
+  height: 60%;
+  display: flex;
+  margin: 10px;
+}
+main .offers div {
+  border: 1px #003153 solid;
+  background-color: #dde0e9;
+  width: 40%;
+  max-height: 30%;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 1;
+}
+main .offers div:nth-child(3) {
+  width: 80%;
+}
+main .offers div:nth-child(3) img {
+  width: 50%;
+}
+main .offers div img {
+  width: 50%;
+  flex-shrink: 1;
+}
+main .offers div p {
+  margin: 0;
+  width: 100%;
+  color: #003153;
+}
+
+footer {
+  height: 3%;
+  background-color: #003153;
+}
+
+/*# sourceMappingURL=sass-styles.css.map */

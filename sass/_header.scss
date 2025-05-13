@@ -1,0 +1,41 @@
+@use 'variables' as*;
+
+nav {
+    background-color: $light-blue-primary-navigation-color;
+    
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+        padding: 5px;        
+        gap: 50px;
+
+        .nav-more {
+            display: none;
+
+        }
+
+        li {
+            list-style: none;
+            text-align: center;    
+
+            a {
+                text-decoration: none;
+                color: $dark-blue-text-backgroundFooter-borders;
+                font-weight: bolder;
+
+                &:hover{
+                    color: $golden-brown-sellingLocationText-linkEfect;
+                    transition: color 0.8s ease;
+                }
+
+                img {
+                    width: 60px;
+                }
+
+            }
+        }
+    }
+}

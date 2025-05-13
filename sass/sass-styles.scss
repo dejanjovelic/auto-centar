@@ -1,5 +1,195 @@
-$primary-navigation-color: #dde0e9;
+@use 'variables' as*;
+@use 'header';
+@use 'main';
+@use 'cars';
 
-nav{
-    background-color: $primary-navigation-color;
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: $fonts;
+}
+
+
+footer {
+    background-color: $dark-blue-text-backgroundFooter-borders;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 10px 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+
+
+        &:last-child {
+            width: 40%;
+            text-align: right;
+        }
+    }
+}
+
+@include responsive($breakpoint-medium) {
+    nav {
+        ul {
+            .nav-hide {
+                display: none;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            .nav-more {
+                display: flex;
+            }
+        }
+    }
+
+    .cars {
+        flex-direction: column-reverse;
+
+        .form {
+
+            width: 100%;
+        }
+
+        .offers {
+            padding-bottom: 40px;
+            padding-top: 20px;
+            width: 100%;
+        }
+    }
+
+    footer {
+        a:last-child {
+            min-width: 500px;
+            text-align: center;
+        }
+    }
+}
+
+@include responsive($breakpoint-extra-small) {
+
+    nav {
+        &:hover {
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                li:not(.nav-more) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        ul {
+            li:not(.nav-image) {
+                display: none;
+                position: relative;
+            }
+        }
+    }
+
+    .sellers {
+        h1 {
+            padding-left: 20px;
+        }
+
+        .locations {
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                width: 60%;
+                margin: 10px;
+
+                h2 {
+                    text-align: center;
+                }
+
+                p {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
+    .cars {
+        flex-direction: column-reverse;
+
+        .form {
+
+            width: 100%;
+        }
+
+        .offers {
+            display: block;
+            width: 100%;
+
+            div {
+                width: 100%;
+
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 10px;
+
+        a {
+            width: 100%;
+            text-align: center;
+        }
+
+        a:last-child {
+            width: 100%;
+            text-align: center;
+            min-width: 0px;
+        }
+    }
+
+
+
+    .cars {
+        form {
+            .dream-car {
+                display: flex;
+                flex-direction: column-reverse;
+                width: 100%;
+                text-align: center;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                color: $dark-blue-text-backgroundFooter-borders;
+
+                h4 {
+                    font-size: 20px;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: 35px;
+                    margin: 0;
+                }
+            }
+        }
+    }
 }

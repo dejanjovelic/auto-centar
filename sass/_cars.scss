@@ -1,0 +1,132 @@
+@use 'variables' as*;
+
+.cars {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px;
+
+    form {
+        
+        
+        background-color: $light-blue-primary-navigation-color;
+        border-radius: 10px;
+        border: 1px solid $dark-blue-text-backgroundFooter-borders;
+        padding: 10px;
+
+        .dream-car {
+            display: flex;
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 70%;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: $dark-blue-text-backgroundFooter-borders;
+
+            h4 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 35px;
+            }
+        }
+
+        .calculator {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: $dark-blue-text-backgroundFooter-borders;
+            font-size: 14px;
+            font-weight: bolder;
+
+            div {
+                width: 45%;
+                padding: 5px;
+                margin-top: 5px;
+            }
+
+            input {
+                width: 100%;
+                border-radius: 20px;
+                border: 1px solid $dark-blue-text-backgroundFooter-borders;
+
+            }
+
+            #car-color {
+                padding: 5px;
+            }
+
+            select {
+                width: 100%;
+                border-radius: 20px;
+                border: 1px solid $dark-blue-text-backgroundFooter-borders;
+            }
+
+            label {
+                display: block;
+
+            }
+
+            .car-color {
+                :first-child {
+                    width: 100%;
+                    height: 5px;
+                }
+
+                label,
+                input {
+                    display: inline-block;
+                    width: 45%;
+
+                }
+            }
+
+        }
+
+        input[type="range"] {
+            padding: 0;
+            width: 60%;
+        }
+
+    }
+
+    .offers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 45%;
+        text-align: center;
+        
+
+        div {
+
+            border-radius: 20px;
+            border: 1px solid $dark-blue-text-backgroundFooter-borders;
+            background-color: $light-blue-primary-navigation-color;
+            width: 40%;
+            margin-top: 10px;
+
+            &:nth-child(3) {
+                width: 80%;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+    }
+}

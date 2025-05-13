@@ -1,5 +1,306 @@
 nav {
   background-color: #dde0e9;
 }
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  align-items: center;
+  padding: 5px;
+  gap: 50px;
+}
+nav ul .nav-more {
+  display: none;
+}
+nav ul li {
+  list-style: none;
+  text-align: center;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #003153;
+  font-weight: bolder;
+}
+nav ul li a:hover {
+  color: #b96d34;
+  transition: color 0.8s ease;
+}
+nav ul li a img {
+  width: 60px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.sellers {
+  background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #003153;
+}
+.sellers h1 {
+  margin-left: 60px;
+  margin-top: 50px;
+}
+.sellers .locations {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding-bottom: 40px;
+}
+.sellers .locations div {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #003153;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 35px;
+}
+.sellers .locations div:hover {
+  border: 1px solid #003153;
+  transition: border 0.8s ease;
+}
+.sellers .locations div p,
+.sellers .locations div h2 {
+  flex-shrink: 1;
+}
+.sellers .locations div span {
+  color: #b96d34;
+}
+
+.cars {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 10px;
+}
+.cars form {
+  background-color: #dde0e9;
+  border-radius: 10px;
+  border: 1px solid #003153;
+  padding: 10px;
+}
+.cars form .dream-car {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.cars form .dream-car img {
+  width: 70%;
+}
+.cars form .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #003153;
+}
+.cars form .description h4 {
+  font-size: 20px;
+}
+.cars form .description p {
+  font-size: 35px;
+}
+.cars form .calculator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #003153;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.cars form .calculator div {
+  width: 45%;
+  padding: 5px;
+  margin-top: 5px;
+}
+.cars form .calculator input {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #003153;
+}
+.cars form .calculator #car-color {
+  padding: 5px;
+}
+.cars form .calculator select {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #003153;
+}
+.cars form .calculator label {
+  display: block;
+}
+.cars form .calculator .car-color :first-child {
+  width: 100%;
+  height: 5px;
+}
+.cars form .calculator .car-color label,
+.cars form .calculator .car-color input {
+  display: inline-block;
+  width: 45%;
+}
+.cars form input[type=range] {
+  padding: 0;
+  width: 60%;
+}
+.cars .offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 45%;
+  text-align: center;
+}
+.cars .offers div {
+  border-radius: 20px;
+  border: 1px solid #003153;
+  background-color: #dde0e9;
+  width: 40%;
+  margin-top: 10px;
+}
+.cars .offers div:nth-child(3) {
+  width: 80%;
+}
+.cars .offers div img {
+  width: 100%;
+}
+.cars .offers div p {
+  margin: 0;
+  width: 100%;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  background-color: #003153;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding: 10px 20px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+footer a:last-child {
+  width: 40%;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  nav ul .nav-hide {
+    display: none;
+  }
+  nav ul .nav-more {
+    display: flex;
+  }
+  .cars {
+    flex-direction: column-reverse;
+  }
+  .cars .form {
+    width: 100%;
+  }
+  .cars .offers {
+    padding-bottom: 40px;
+    padding-top: 20px;
+    width: 100%;
+  }
+  footer a:last-child {
+    min-width: 500px;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  nav:hover ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav:hover ul li:not(.nav-more) {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul li:not(.nav-image) {
+    display: none;
+    position: relative;
+  }
+  .sellers h1 {
+    padding-left: 20px;
+  }
+  .sellers .locations {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sellers .locations div {
+    width: 60%;
+    margin: 10px;
+  }
+  .sellers .locations div h2 {
+    text-align: center;
+  }
+  .sellers .locations div p {
+    padding-left: 20px;
+  }
+  .cars {
+    flex-direction: column-reverse;
+  }
+  .cars .form {
+    width: 100%;
+  }
+  .cars .offers {
+    display: block;
+    width: 100%;
+  }
+  .cars .offers div {
+    width: 100%;
+  }
+  .cars .offers div:nth-child(3) {
+    width: 100%;
+  }
+  footer {
+    padding: 10px;
+  }
+  footer a {
+    width: 100%;
+    text-align: center;
+  }
+  footer a:last-child {
+    width: 100%;
+    text-align: center;
+    min-width: 0px;
+  }
+  .cars form .dream-car {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    text-align: center;
+  }
+  .cars form .dream-car img {
+    width: 100%;
+  }
+  .cars form .description {
+    display: flex;
+    flex-direction: column;
+    color: #003153;
+  }
+  .cars form .description h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .cars form .description p {
+    font-size: 35px;
+    margin: 0;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

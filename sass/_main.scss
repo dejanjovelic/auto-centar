@@ -1,0 +1,55 @@
+@use "variables" as*;
+
+main {
+    flex-grow: 1;
+}
+
+.sellers {
+
+    background-image: url("https://skolovanje.b-cdn.net/osnove%20veb%20programiranja/2.%20HTML%20layout%2C%20SASS/2.3%20Sass/road_without_car.jpeg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $dark-blue-text-backgroundFooter-borders;
+
+
+    h1 {
+        margin-left: 60px;
+        margin-top: 50px;
+
+    }
+
+    .locations {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        padding-bottom: 40px;
+        
+
+        div {
+            background-color: rgba(255, 255, 255, 0.6);
+            color: $dark-blue-text-backgroundFooter-borders;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 35px;
+
+            &:hover {
+                border: 1px solid $dark-blue-text-backgroundFooter-borders;
+                transition: border 0.8s ease;
+            }
+
+
+            p,
+            h2 {
+                flex-shrink: 1;
+               
+            }
+
+            span {
+                color: $golden-brown-sellingLocationText-linkEfect;
+            }
+        }
+
+    }
+}
